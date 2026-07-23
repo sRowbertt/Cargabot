@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*==========================================
             NAVBAR
 ==========================================*/
@@ -134,7 +134,7 @@
 
     box-shadow:none !important;
 
-=======
+}
 /*==========================================
             NAVBAR
 ==========================================*/
@@ -270,5 +270,141 @@
 
     box-shadow:none !important;
 
->>>>>>> 2a82998 (Agregado favicon y corregido logo)
+}
+/*==========================================
+            NAVBAR
+==========================================*/
+
+.navbar{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 18px 0;
+
+    transition: all .35s ease;
+
+}
+
+/* Cuando se hace scroll */
+
+.navbar.scrolled{
+
+    background: rgba(8,31,77,.95);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.20);
+
+}
+
+/* Logo */
+
+.navbar-brand img{
+
+    height:48px;
+
+    transition:.3s;
+
+}
+
+.navbar-brand img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Links */
+
+.nav-link{
+
+    color:white !important;
+
+    margin-left:18px;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#00D4FF;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+.nav-link:hover{
+
+    color:#00D4FF !important;
+
+}
+
+/* Botón */
+
+.btn-navbar{
+
+    margin-left:30px;
+
+    background:#00D4FF;
+
+    color:white;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.btn-navbar:hover{
+
+    background:white;
+
+    color:#081F4D;
+
+    transform:translateY(-3px);
+
+}
+
+/* Botón hamburguesa */
+
+.navbar-toggler{
+
+    border:none;
+
+    box-shadow:none !important;
+
+
 }
