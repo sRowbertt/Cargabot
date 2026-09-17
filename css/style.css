@@ -3,13 +3,28 @@
             style.css
 ==========================================*/
 
-/* RESET */
+/* PALETA DE COLORES - acorde al logo CarBot */
 
-html{
+:root{
 
-    scroll-behavior:smooth;
+    --cb-black-deep:#0a0a0a;   /* fondos más oscuros (footer, stats) */
+    --cb-black:#121212;        /* fondo base */
+    --cb-surface:#1c1c1c;      /* tarjetas / cajas */
+    --cb-surface-alt:#171717;  /* secciones alternas */
+
+    --cb-gold:#e3a73e;         /* acento principal (dorado del logo) */
+    --cb-gold-dark:#c6871f;    /* hover / estado activo */
+    --cb-gold-light:#f2c874;   /* detalles suaves */
+
+    --cb-silver:#c9c9c9;       /* plata (letras "CAR" del logo) */
+    --cb-border:#2a2a2a;
+
+    --cb-text:#f2f2f2;         /* texto principal sobre fondo oscuro */
+    --cb-text-muted:#a8a8a8;   /* texto secundario */
 
 }
+
+/* RESET */
 
 *{
     margin:0;
@@ -25,9 +40,9 @@ body{
 
     font-family:'Inter',sans-serif;
 
-    background:#ffffff;
+    background:var(--cb-black);
 
-    color:#222;
+    color:var(--cb-text);
 
     overflow-x:hidden;
 
@@ -65,15 +80,15 @@ img{
 
 .btn-cargabot{
 
-    background:#00D4FF;
+    background:var(--cb-gold);
 
-    color:white;
+    color:var(--cb-black-deep);
 
     padding:14px 35px;
 
     border-radius:50px;
 
-    font-weight:600;
+    font-weight:700;
 
     transition:.35s;
 
@@ -83,7 +98,7 @@ img{
 
 .btn-cargabot:hover{
 
-    background:#081F4D;
+    background:var(--cb-gold-dark);
 
     color:white;
 
@@ -99,7 +114,7 @@ section h2{
 
     text-align:center;
 
-    color:#081F4D;
+    color:var(--cb-text);
 
     margin-bottom:25px;
 
@@ -119,6 +134,8 @@ section h2{
 
     font-size:19px;
 
+    color:var(--cb-text-muted);
+
     margin-bottom:60px;
 
 }
@@ -127,9 +144,9 @@ section h2{
 
 .footer{
 
-    background:#081F4D;
+    background:var(--cb-black-deep);
 
-    color:white;
+    color:var(--cb-text);
 
     padding:30px 0;
 
