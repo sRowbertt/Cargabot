@@ -1,4 +1,3 @@
-
 /*==========================================
             NOSOTROS
 ==========================================*/
@@ -7,7 +6,7 @@
 
     padding:120px 0;
 
-    background:#f5f7fb;
+    background:var(--cb-surface-alt);
 
 }
 
@@ -23,13 +22,15 @@
 
 .card-item{
 
-    background:white;
+    background:var(--cb-surface);
 
     padding:40px;
 
     border-radius:20px;
 
-    box-shadow:0 15px 30px rgba(0,0,0,.08);
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
+
+    border:1px solid var(--cb-border);
 
     transition:.3s;
 
@@ -39,13 +40,22 @@
 
     transform:translateY(-10px);
 
+    border-color:var(--cb-gold);
+
 }
 
 .card-item h3{
 
-    color:#081F4D;
+    color:var(--cb-gold);
 
     margin-bottom:25px;
+
+}
+
+.card-item p,
+.values-list li{
+
+    color:var(--cb-text-muted);
 
 }
 
@@ -57,7 +67,7 @@
 
     padding:120px 0;
 
-    background:white;
+    background:var(--cb-black);
 
     text-align:center;
 
@@ -74,37 +84,6 @@
     line-height:1.8;
 
 }
-
-/*==========================================
-            EQUIPO
-==========================================*/
-
-.team-section{
-
-    padding:120px 0;
-
-    background:#f5f7fb;
-
-    text-align:center;
-
-}
-
-/*==========================================
-            CONTACTO
-==========================================*/
-
-.contact-section{
-
-    padding:120px 0;
-
-    background:white;
-
-    text-align:center;
-
-}
-/*==========================================
-        ROBOT
-==========================================*/
 
 .robot-img{
 
@@ -129,6 +108,8 @@
     line-height:1.8;
 
     margin:30px 0;
+
+    color:var(--cb-text-muted);
 
 }
 
@@ -158,13 +139,13 @@
 
     font-size:40px;
 
-    color:#00D4FF;
+    color:var(--cb-gold);
 
 }
 
 .feature h4{
 
-    color:#081F4D;
+    color:var(--cb-text);
 
     margin-bottom:8px;
 
@@ -174,13 +155,23 @@
 
     margin:0;
 
-    color:#555;
+    color:var(--cb-text-muted);
 
 }
 
 /*==========================================
                 EQUIPO
 ==========================================*/
+
+.team-section{
+
+    padding:120px 0;
+
+    background:var(--cb-surface-alt);
+
+    text-align:center;
+
+}
 
 .team-grid{
 
@@ -196,7 +187,7 @@
 
 .member-card{
 
-    background:white;
+    background:var(--cb-surface);
 
     border-radius:20px;
 
@@ -204,7 +195,9 @@
 
     text-align:center;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+    border:1px solid var(--cb-border);
 
     transition:.35s;
 
@@ -213,6 +206,8 @@
 .member-card:hover{
 
     transform:translateY(-10px);
+
+    border-color:var(--cb-gold);
 
 }
 
@@ -230,7 +225,7 @@
 
     margin-bottom:25px;
 
-    border:5px solid #00D4FF;
+    border:5px solid var(--cb-gold);
 
 }
 
@@ -238,7 +233,7 @@
 
     font-size:24px;
 
-    color:#081F4D;
+    color:var(--cb-text);
 
     margin-bottom:8px;
 
@@ -248,7 +243,7 @@
 
     display:block;
 
-    color:#00AEEF;
+    color:var(--cb-gold-light);
 
     font-weight:600;
 
@@ -258,14 +253,25 @@
 
 .member-card p{
 
-    color:#555;
+    color:var(--cb-text-muted);
 
     line-height:1.7;
 
 }
+
 /*==========================================
             CONTACTO
 ==========================================*/
+
+.contact-section{
+
+    padding:120px 0;
+
+    background:var(--cb-black);
+
+    text-align:center;
+
+}
 
 .contact-container{
 
@@ -281,19 +287,23 @@
 
 .contact-info{
 
-    background:#081F4D;
+    background:var(--cb-surface);
 
-    color:white;
+    color:var(--cb-text);
 
     padding:40px;
 
     border-radius:20px;
+
+    border:1px solid var(--cb-border);
 
 }
 
 .contact-info h3{
 
     margin-bottom:30px;
+
+    color:var(--cb-gold);
 
 }
 
@@ -305,11 +315,13 @@
 
     line-height:1.7;
 
+    color:var(--cb-text-muted);
+
 }
 
 .contact-info i{
 
-    color:#00D4FF;
+    color:var(--cb-gold);
 
     margin-right:10px;
 
@@ -331,7 +343,9 @@
 
     padding:16px;
 
-    border:1px solid #ddd;
+    background:var(--cb-surface);
+
+    border:1px solid var(--cb-border);
 
     border-radius:12px;
 
@@ -339,9 +353,19 @@
 
     font-family:'Inter',sans-serif;
 
+    color:var(--cb-text);
+
     outline:none;
 
     transition:.3s;
+
+}
+
+.contact-form input::placeholder,
+
+.contact-form textarea::placeholder{
+
+    color:var(--cb-text-muted);
 
 }
 
@@ -349,9 +373,9 @@
 
 .contact-form textarea:focus{
 
-    border-color:#00D4FF;
+    border-color:var(--cb-gold);
 
-    box-shadow:0 0 10px rgba(0,212,255,.2);
+    box-shadow:0 0 10px rgba(227,167,62,.25);
 
 }
 
@@ -369,7 +393,7 @@
 
     padding:120px 0;
 
-    background:#081F4D;
+    background:var(--cb-black-deep);
 
     color:white;
 
@@ -377,7 +401,7 @@
 
 .advantages h2{
 
-    color:white;
+    color:var(--cb-text);
 
 }
 
@@ -395,13 +419,15 @@
 
 .adv-card{
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.05);
 
     padding:35px;
 
     border-radius:20px;
 
     text-align:center;
+
+    border:1px solid var(--cb-border);
 
     transition:.35s;
 
@@ -411,7 +437,9 @@
 
     transform:translateY(-10px);
 
-    background:rgba(255,255,255,.12);
+    background:rgba(227,167,62,.08);
+
+    border-color:var(--cb-gold);
 
 }
 
@@ -419,7 +447,7 @@
 
     font-size:55px;
 
-    color:#00D4FF;
+    color:var(--cb-gold);
 
     margin-bottom:20px;
 
@@ -435,7 +463,7 @@
 
 .adv-card p{
 
-    color:#d8e3f0;
+    color:var(--cb-text-muted);
 
     line-height:1.8;
 
@@ -449,7 +477,7 @@
 
     padding:90px 0;
 
-    background:#ffffff;
+    background:var(--cb-black);
 
 }
 
@@ -469,7 +497,7 @@
 
     font-size:64px;
 
-    color:#081F4D;
+    color:var(--cb-gold);
 
     margin-bottom:10px;
 
@@ -477,7 +505,7 @@
 
 .stat-item p{
 
-    color:#555;
+    color:var(--cb-text-muted);
 
     font-size:18px;
 
@@ -491,7 +519,7 @@
 
     padding:120px 0;
 
-    background:#f5f7fb;
+    background:var(--cb-surface-alt);
 
 }
 
@@ -519,7 +547,7 @@
 
     height:100%;
 
-    background:#d6e3f0;
+    background:var(--cb-border);
 
 }
 
@@ -543,7 +571,7 @@
 
     border-radius:50%;
 
-    background:white;
+    background:var(--cb-surface);
 
     display:flex;
 
@@ -551,11 +579,13 @@
 
     justify-content:center;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
 
     z-index:2;
 
     flex-shrink:0;
+
+    color:var(--cb-text-muted);
 
 }
 
@@ -567,15 +597,15 @@
 
 .timeline-item.completed .timeline-icon{
 
-    background:#00D4FF;
+    background:var(--cb-gold);
 
-    color:white;
+    color:var(--cb-black-deep);
 
 }
 
 .timeline-item.active .timeline-icon{
 
-    background:#081F4D;
+    background:var(--cb-gold-dark);
 
     color:white;
 
@@ -583,13 +613,15 @@
 
 .timeline-content{
 
-    background:white;
+    background:var(--cb-surface);
 
     padding:25px;
 
     border-radius:18px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+    border:1px solid var(--cb-border);
 
     flex:1;
 
@@ -597,7 +629,7 @@
 
 .timeline-content h3{
 
-    color:#081F4D;
+    color:var(--cb-text);
 
     margin-bottom:10px;
 
@@ -605,7 +637,7 @@
 
 .timeline-content p{
 
-    color:#555;
+    color:var(--cb-text-muted);
 
     margin:0;
 
@@ -619,7 +651,7 @@
 
 .footer{
 
-    background:#06152F;
+    background:var(--cb-black-deep);
 
     color:white;
 
@@ -649,7 +681,7 @@
 
     margin-bottom:20px;
 
-    color:#00D4FF;
+    color:var(--cb-gold);
 
 }
 
@@ -669,7 +701,7 @@
 
 .footer a{
 
-    color:#d8e3f0;
+    color:var(--cb-text-muted);
 
     transition:.3s;
 
@@ -677,7 +709,7 @@
 
 .footer a:hover{
 
-    color:#00D4FF;
+    color:var(--cb-gold);
 
 }
 
@@ -699,7 +731,7 @@
 
     border-radius:50%;
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.06);
 
     display:flex;
 
@@ -731,9 +763,9 @@
 
 .socials a:hover{
 
-    background:#00D4FF;
+    background:var(--cb-gold);
 
-    color:white;
+    color:var(--cb-black-deep);
 
     transform:translateY(-5px);
 
@@ -743,7 +775,7 @@
 
     margin:50px 0 20px;
 
-    border-color:rgba(255,255,255,.1);
+    border-color:rgba(255,255,255,.08);
 
 }
 
@@ -751,7 +783,7 @@
 
     text-align:center;
 
-    color:#b8c4d4;
+    color:#7a7a7a;
 
 }
 
@@ -763,7 +795,7 @@
 
     padding:120px 0;
 
-    background:#F8FAFC;
+    background:var(--cb-black);
 
 }
 
@@ -787,7 +819,9 @@
 
     border-radius:20px;
 
-    box-shadow:0 15px 30px rgba(0,0,0,.10);
+    box-shadow:0 15px 30px rgba(0,0,0,.4);
+
+    border:1px solid var(--cb-border);
 
 }
 
@@ -815,7 +849,7 @@
 
     inset:0;
 
-    background:rgba(8,31,77,.75);
+    background:rgba(10,10,10,.85);
 
     display:flex;
 
@@ -823,7 +857,7 @@
 
     align-items:center;
 
-    color:white;
+    color:var(--cb-gold);
 
     font-size:28px;
 
@@ -838,851 +872,5 @@
 .gallery-item:hover .gallery-overlay{
 
     opacity:1;
-
-
-
-}
-
-/*==========================================
-            NOSOTROS
-==========================================*/
-
-.about{
-
-    padding:120px 0;
-
-    background:#f5f7fb;
-
-}
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.card-item{
-
-    background:white;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.card-item:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.card-item h3{
-
-    color:#081F4D;
-
-    margin-bottom:25px;
-
-}
-
-/*==========================================
-            ROBOT
-==========================================*/
-
-.robot-section{
-
-    padding:120px 0;
-
-    background:white;
-
-    text-align:center;
-
-}
-
-.robot-section p{
-
-    max-width:800px;
-
-    margin:auto;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-}
-
-/*==========================================
-            EQUIPO
-==========================================*/
-
-.team-section{
-
-    padding:120px 0;
-
-    background:#f5f7fb;
-
-    text-align:center;
-
-}
-
-/*==========================================
-            CONTACTO
-==========================================*/
-
-.contact-section{
-
-    padding:120px 0;
-
-    background:white;
-
-    text-align:center;
-
-}
-/*==========================================
-        ROBOT
-==========================================*/
-
-.robot-img{
-
-    width:420px;
-
-    margin:auto;
-
-    transition:.4s;
-
-}
-
-.robot-img:hover{
-
-    transform:scale(1.05);
-
-}
-
-.robot-text{
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    margin:30px 0;
-
-}
-
-.features{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
-
-    margin-top:40px;
-
-}
-
-.feature{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:20px;
-
-}
-
-.feature i{
-
-    font-size:40px;
-
-    color:#00D4FF;
-
-}
-
-.feature h4{
-
-    color:#081F4D;
-
-    margin-bottom:8px;
-
-}
-
-.feature p{
-
-    margin:0;
-
-    color:#555;
-
-}
-
-/*==========================================
-                EQUIPO
-==========================================*/
-
-.team-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-    margin-top:60px;
-
-}
-
-.member-card{
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    text-align:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-.member-card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.member-card img{
-
-    width:140px;
-
-    height:140px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border:5px solid #00D4FF;
-
-}
-
-.member-card h3{
-
-    font-size:24px;
-
-    color:#081F4D;
-
-    margin-bottom:8px;
-
-}
-
-.member-card span{
-
-    display:block;
-
-    color:#00AEEF;
-
-    font-weight:600;
-
-    margin-bottom:20px;
-
-}
-
-.member-card p{
-
-    color:#555;
-
-    line-height:1.7;
-
-}
-/*==========================================
-            CONTACTO
-==========================================*/
-
-.contact-container{
-
-    display:grid;
-
-    grid-template-columns:1fr 1.3fr;
-
-    gap:50px;
-
-    margin-top:60px;
-
-}
-
-.contact-info{
-
-    background:#081F4D;
-
-    color:white;
-
-    padding:40px;
-
-    border-radius:20px;
-
-}
-
-.contact-info h3{
-
-    margin-bottom:30px;
-
-}
-
-.contact-info p{
-
-    margin-bottom:20px;
-
-    font-size:18px;
-
-    line-height:1.7;
-
-}
-
-.contact-info i{
-
-    color:#00D4FF;
-
-    margin-right:10px;
-
-}
-
-.contact-form{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
-}
-
-.contact-form input,
-
-.contact-form textarea{
-
-    padding:16px;
-
-    border:1px solid #ddd;
-
-    border-radius:12px;
-
-    font-size:16px;
-
-    font-family:'Inter',sans-serif;
-
-    outline:none;
-
-    transition:.3s;
-
-}
-
-.contact-form input:focus,
-
-.contact-form textarea:focus{
-
-    border-color:#00D4FF;
-
-    box-shadow:0 0 10px rgba(0,212,255,.2);
-
-}
-
-.contact-form textarea{
-
-    resize:none;
-
-}
-
-/*==========================================
-        VENTAJAS
-==========================================*/
-
-.advantages{
-
-    padding:120px 0;
-
-    background:#081F4D;
-
-    color:white;
-
-}
-
-.advantages h2{
-
-    color:white;
-
-}
-
-.advantages-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-    margin-top:60px;
-
-}
-
-.adv-card{
-
-    background:rgba(255,255,255,.08);
-
-    padding:35px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    transition:.35s;
-
-}
-
-.adv-card:hover{
-
-    transform:translateY(-10px);
-
-    background:rgba(255,255,255,.12);
-
-}
-
-.adv-card i{
-
-    font-size:55px;
-
-    color:#00D4FF;
-
-    margin-bottom:20px;
-
-}
-
-.adv-card h3{
-
-    color:white;
-
-    margin-bottom:20px;
-
-}
-
-.adv-card p{
-
-    color:#d8e3f0;
-
-    line-height:1.8;
-
-}
-
-/*==========================================
-            ESTADÍSTICAS
-==========================================*/
-
-.stats-section{
-
-    padding:90px 0;
-
-    background:#ffffff;
-
-}
-
-.stats-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:30px;
-
-    text-align:center;
-
-}
-
-.stat-item h3{
-
-    font-size:64px;
-
-    color:#081F4D;
-
-    margin-bottom:10px;
-
-}
-
-.stat-item p{
-
-    color:#555;
-
-    font-size:18px;
-
-}
-
-/*==========================================
-            TIMELINE
-==========================================*/
-
-.timeline-section{
-
-    padding:120px 0;
-
-    background:#f5f7fb;
-
-}
-
-.timeline{
-
-    position:relative;
-
-    max-width:900px;
-
-    margin:70px auto 0;
-
-}
-
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:28px;
-
-    top:0;
-
-    width:4px;
-
-    height:100%;
-
-    background:#d6e3f0;
-
-}
-
-.timeline-item{
-
-    position:relative;
-
-    display:flex;
-
-    gap:25px;
-
-    margin-bottom:50px;
-
-}
-
-.timeline-icon{
-
-    width:60px;
-
-    height:60px;
-
-    border-radius:50%;
-
-    background:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
-
-    z-index:2;
-
-    flex-shrink:0;
-
-}
-
-.timeline-icon i{
-
-    font-size:28px;
-
-}
-
-.timeline-item.completed .timeline-icon{
-
-    background:#00D4FF;
-
-    color:white;
-
-}
-
-.timeline-item.active .timeline-icon{
-
-    background:#081F4D;
-
-    color:white;
-
-}
-
-.timeline-content{
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:18px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    flex:1;
-
-}
-
-.timeline-content h3{
-
-    color:#081F4D;
-
-    margin-bottom:10px;
-
-}
-
-.timeline-content p{
-
-    color:#555;
-
-    margin:0;
-
-    line-height:1.7;
-
-}
-
-/*==========================================
-                FOOTER
-==========================================*/
-
-.footer{
-
-    background:#06152F;
-
-    color:white;
-
-    padding:80px 0 25px;
-
-}
-
-.footer-grid{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr 1fr 1fr;
-
-    gap:40px;
-
-}
-
-.footer-logo{
-
-    width:170px;
-
-    margin-bottom:20px;
-
-}
-
-.footer h4{
-
-    margin-bottom:20px;
-
-    color:#00D4FF;
-
-}
-
-.footer ul{
-
-    list-style:none;
-
-    padding:0;
-
-}
-
-.footer li{
-
-    margin-bottom:12px;
-
-}
-
-.footer a{
-
-    color:#d8e3f0;
-
-    transition:.3s;
-
-}
-
-.footer a:hover{
-
-    color:#00D4FF;
-
-}
-
-.socials{
-
-    display:flex;
-
-    gap:18px;
-
-    margin-top:15px;
-
-}
-
-.socials a{
-
-    width:50px;
-
-    height:50px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:24px;
-
-    color:white;
-
-    transition:.3s;
-
-}
-
-.socials a i{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:100%;
-
-    height:100%;
-
-}
-
-.socials a:hover{
-
-    background:#00D4FF;
-
-    color:white;
-
-    transform:translateY(-5px);
-
-}
-
-.footer hr{
-
-    margin:50px 0 20px;
-
-    border-color:rgba(255,255,255,.1);
-
-}
-
-.footer-copy{
-
-    text-align:center;
-
-    color:#b8c4d4;
-
-}
-
-/*==========================================
-            GALERÍA
-==========================================*/
-
-.gallery-section{
-
-    padding:120px 0;
-
-    background:#F8FAFC;
-
-}
-
-.gallery-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-    margin-top:60px;
-
-}
-
-.gallery-item{
-
-    position:relative;
-
-    overflow:hidden;
-
-    border-radius:20px;
-
-    box-shadow:0 15px 30px rgba(0,0,0,.10);
-
-}
-
-.gallery-item img{
-
-    width:100%;
-
-    height:300px;
-
-    object-fit:cover;
-
-    transition:.4s;
-
-}
-
-.gallery-item:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.gallery-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(8,31,77,.75);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:white;
-
-    font-size:28px;
-
-    font-weight:bold;
-
-    opacity:0;
-
-    transition:.3s;
-
-}
-
-.gallery-item:hover .gallery-overlay{
-
-    opacity:1;
-
-
 
 }
