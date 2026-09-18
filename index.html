@@ -674,23 +674,56 @@
 
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form"
+      action="https://formsubmit.co/cargabot@gmail.com"
+      method="POST">
 
-                <input type="text" placeholder="Nombre completo">
+    <!-- Asunto del correo -->
+    <input type="hidden"
+           name="_subject"
+           value="Nuevo mensaje desde CargaBot">
 
-                <input type="email" placeholder="Correo electrónico">
+    <!-- Formato del correo -->
+    <input type="hidden"
+           name="_template"
+           value="table">
 
-                <input type="text" placeholder="Asunto">
+    <!-- Protección contra spam -->
+    <input type="hidden"
+           name="_captcha"
+           value="true">
 
-                <textarea rows="6" placeholder="Escribe tu mensaje..."></textarea>
+    <!-- Nombre -->
+    <input type="text"
+           name="name"
+           placeholder="Nombre completo"
+           required>
 
-                <button type="submit" class="btn-cargabot">
+    <!-- Correo -->
+    <input type="email"
+           name="email"
+           placeholder="Correo electrónico"
+           required>
 
-                    Enviar Mensaje
+    <!-- Asunto -->
+    <input type="text"
+           name="subject"
+           placeholder="Asunto"
+           required>
 
-                </button>
+    <!-- Mensaje -->
+    <textarea name="message"
+              rows="6"
+              placeholder="Escribe tu mensaje..."
+              required></textarea>
 
-            </form>
+    <button type="submit" class="btn-cargabot">
+
+        Enviar Mensaje
+
+    </button>
+
+</form>
 
         </div>
 
@@ -749,9 +782,9 @@
 
                     <li>Quetzaltenango, Guatemala</li>
 
-                    <li>contacto@cargabot.com</li>
+                    <li>cargabot@gmail.com</li>
 
-                    <li>+502 0000-0000</li>
+                    <li>+502 5910-8058</li>
 
                 </ul>
 
