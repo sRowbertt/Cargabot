@@ -153,3 +153,21 @@ section h2{
     text-align:center;
 
 }
+
+/* =========================================
+   TRANSICIONES ENTRE PÁGINAS
+========================================= */
+body {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Clase que se aplica al cargar la página para mostrarla */
+body.page-loaded {
+    opacity: 1;
+}
+
+/* Clase que se aplica al hacer clic antes de irse */
+body.page-exit {
+    opacity: 0;
+}
