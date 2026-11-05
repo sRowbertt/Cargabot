@@ -348,16 +348,21 @@
                     <p><i class="bi bi-telephone-fill"></i> +502 5910-8058</p>
                     <p><i class="bi bi-clock-fill"></i> Lunes a Viernes<br>8:00 AM - 5:00 PM</p>
                 </div>
-                <form class="contact-form" action="https://formsubmit.co/cargabot@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="Nuevo mensaje desde CarBot">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_autorespond" value="¡Hola! Gracias por contactar a CarBot. Hemos recibido tu mensaje y nuestro equipo se pondrá en contacto contigo lo antes posible.">
-                    <input type="hidden" name="_next" value="https://srowbertt.github.io/Cargabot/#contacto">
+                
+                <!-- Formulario de Contacto Web3Forms -->
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Tu clave de acceso de Web3Forms -->
+                    <input type="hidden" name="access_key" value="a8b4a1fd-2bfe-4847-ab3c-273c16f1f6d4">
                     
+                    <!-- Asunto del correo -->
+                    <input type="hidden" name="subject" value="Nuevo mensaje desde CarBot">
+                    
+                    <!-- Redirección automática a la sección de contacto al enviar -->
+                    <input type="hidden" name="redirect" value="https://srowbertt.github.io/Cargabot/#contacto">
+
                     <input type="text" name="name" placeholder="Nombre completo" required>
                     <input type="email" name="email" placeholder="Correo electrónico" required>
-                    <input type="text" name="subject" placeholder="Asunto" required>
+                    <input type="text" name="msg_subject" placeholder="Asunto" required>
                     <textarea name="message" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
                     
                     <button type="submit" class="btn-cargabot">Enviar Mensaje</button>
