@@ -18,6 +18,40 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Ajustes específicos para el despliegue dinámico de los artículos */
+        details summary {
+            cursor: pointer;
+            list-style: none;
+            outline: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        .article-detail {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid #D4AF37;
+            padding: 12px 15px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+            color: #d1d1d1;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .article-detail h5 {
+            color: #D4AF37;
+            font-size: 0.95rem;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .blog-author {
+            font-size: 0.8rem;
+            color: #aaa;
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
 
@@ -59,7 +93,7 @@
     </nav>
     
     <!-- CONTENIDO DEL BLOG -->
-   <main style="padding-top: 120px; min-height: 80vh; background-color: #121212;">
+    <main style="padding-top: 120px; min-height: 80vh; background-color: #121212;">
         <section class="blog-section">
             <div class="container">
                 <div class="section-title">
@@ -68,47 +102,325 @@
                 </div>
 
                 <div class="blog-grid">
-                    <!-- Artículo 1 -->
+
+                    <!-- ================= CATEGORÍA 1: INGENIERÍA ================= -->
+
+                    <!-- Artículo 1.1 -->
                     <article class="blog-card">
                         <div class="blog-image">
-                            <img src="img/galeria/proximamente.png" alt="Desarrollo de CarBot">
+                            <img src="img/galeria/proximamente.png" alt="Arquitectura Mecatrónica">
                             <div class="blog-date">15 Sept, 2026</div>
                         </div>
                         <div class="blog-content">
                             <span class="blog-category">Ingeniería</span>
-                            <h3>Integración de visión por computadora en tiempo real</h3>
-                            <p>Conoce cómo estamos implementando detección de objetos y algoritmos de seguimiento para mejorar la navegación autónoma de nuestros equipos.</p>
-                            <a href="#" class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></a>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Dominick Palacios (Gerencia General)</span>
+                            <h3>Arquitectura mecatrónica de CarBot: Diseño modular y tracción por bandas oruga</h3>
+                            <p>Un análisis estructural sobre cómo elegimos la tracción oruga para garantizar estabilidad y capacidad de carga de hasta 30 kg en terrenos irregulares.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Desafío Terrestre Urbano</h5>
+                                    <p>El entorno universitario y técnico de Quetzaltenango presenta retos de desplazamiento severos: adoquín desgastado, banquetas de concreto con desniveles, pasillos estrechos y rampas peatonales con inclinaciones de hasta 15°. Las ruedas convencionales tienden a atascarse o resbalar bajo cargas pesadas.</p>
+                                    <h5>Solución por Bandas de Tracción</h5>
+                                    <p>Seleccionamos un sistema de tracción oruga continua montado sobre un chasis reforzado de polímeros técnicos. Este diseño distribuye uniformemente la masa de hasta 30 kg, reduciendo la presión sobre el suelo e incrementando el área de contacto para evitar vuelcos.</p>
+                                    <h5>Estructura Modular Integrada</h5>
+                                    <p>El chasis cuenta con puntos de anclaje rápido diseñados específicamente para acoplar bandejas de carga intercambiables. Esto permite transportar desde cajas de herramientas Truper hasta maletines de instrumentación delicada sin requerir adaptadores externos complejos.</p>
+                                </div>
+                            </details>
                         </div>
                     </article>
 
-                    <!-- Artículo 2 -->
+                    <!-- Artículo 1.2 -->
                     <article class="blog-card">
                         <div class="blog-image">
-                            <img src="img/galeria/proximamente.png" alt="Sistemas embebidos">
+                            <img src="img/galeria/proximamente.png" alt="Visión por Computadora">
+                            <div class="blog-date">10 Sept, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Ingeniería</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Julio Vásquez (Área Técnica)</span>
+                            <h3>Integración de visión por computadora en tiempo real</h3>
+                            <p>Conoce cómo estamos implementando detección de objetos y algoritmos de seguimiento para mejorar la navegación autónoma de nuestros equipos.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Procesamiento de Imagen en el Borde</h5>
+                                    <p>Utilizando sensores ópticos y procesamiento digital en tiempo real, CarBot analiza el entorno peatonal continuo para diferenciar entre el usuario principal, obstáculos fijos y peatones en movimiento.</p>
+                                    <h5>Algoritmos de Distancia de Seguridad</h5>
+                                    <p>La lógica de seguimiento calcula vectores de posición dinámicos que le permiten al robot ajustar su aceleración instantánea. Si el usuario se detiene de golpe, el sistema de frenado electromecánico detiene la marcha a una distancia mínima de seguridad de 50 cm.</p>
+                                    <h5>Inmunidad a Ruido Lumínico</h5>
+                                    <p>El software de visión cuenta con filtros de balance de blancos dinámicos para tolerar cambios abruptos de iluminación, como pasar de la luz solar directa en los patios del campus a la penumbra de un pasillo o laboratorio.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 1.3 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Ergonomía Robótica">
+                            <div class="blog-date">05 Sept, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Ingeniería</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Roberto Lorenzo (Ventas y Marketing)</span>
+                            <h3>Ergonomía aplicada a la robótica: Reducción del estrés lumbar</h3>
+                            <p>Evaluamos el impacto del acarreo de herramientas pesadas en estudiantes e instaladores técnicos, y cómo la automatización previene lesiones lumbares.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>El Problema de la Carga Asimétrica</h5>
+                                    <p>Un estudiante o técnico promedio traslada entre 15 y 25 libras diarias de equipo a lo largo de 2 a 4 kilómetros. Llevar una caja de herramientas en un solo brazo o una mochila sobrecargada genera microtraumatismos en la columna vertebral y contracturas lumbares a mediano plazo.</p>
+                                    <h5>Transferencia de Carga Cero</h5>
+                                    <p>CarBot elimina el esfuerzo físico del usuario asumiendo el 100% del peso del equipo. Al delegar la tracción al asistente robótico, el usuario camina ergonómicamente erguido y con las manos libres.</p>
+                                    <h5>Aumento en la Productividad</h5>
+                                    <p>Un técnico o estudiante sin fatiga física conserva mayores niveles de energía y concentración para ejecutar sus proyectos mecánicos y electrónicos en los laboratorios de pruebas finales.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 1.4 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Eficiencia Energética">
+                            <div class="blog-date">30 Ago, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Ingeniería</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Cristian Ixcot (Administración y Finanzas)</span>
+                            <h3>Eficiencia energética y fuentes de alimentación para vehículos de carga</h3>
+                            <p>Desglose técnico de la química de baterías y consumo eléctrico en motores de alto torque para maximizar la autonomía operativa del robot.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Dimensionamiento del Banco de Baterías</h5>
+                                    <p>El equilibrio entre peso propio y autonomía fue resuelto mediante la implementación de celdas de Ion-Litio gestionadas por un módulo BMS (Battery Management System) inteligente de alta eficiencia.</p>
+                                    <h5>Gestión de Torque y Corriente</h5>
+                                    <p>Los motores DC cuentan con reductores metálicos que optimizan la relación de transmisión, demandando picos de corriente elevados únicamente durante el arranque en rampas de 15° y manteniendo un consumo estable en velocidad de crucero peatonal (3.5 km/h).</p>
+                                    <h5>Modo de Ahorro "Standby"</h5>
+                                    <p>Cuando CarBot detecta que el usuario ha permanecido estático por más de 2 minutos, el sistema apaga los controladores de potencia secundarios y mantiene activo únicamente el receptor de señal, prolongando la autonomía hasta por 8 horas continuas de uso intercalado.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- ================= CATEGORÍA 2: DESARROLLO ================= -->
+
+                    <!-- Artículo 2.1 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Sistemas Embebidos">
                             <div class="blog-date">28 Ago, 2026</div>
                         </div>
                         <div class="blog-content">
                             <span class="blog-category">Desarrollo</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Julio Vásquez (Área Técnica)</span>
                             <h3>Optimización de cinemática y control de motores</h3>
                             <p>Un vistazo técnico a cómo procesamos las ecuaciones cinemáticas y utilizamos microcontroladores avanzados para un movimiento fluido y preciso.</p>
-                            <a href="#" class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></a>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Modelado Cinemático Diferencial</h5>
+                                    <p>El control de un vehículo oruga requiere traducir los comandos de dirección en diferencias de velocidad angular entre la oruga izquierda y la oruga derecha. El software resuelve estas ecuaciones diferencialmente en milisegundos.</p>
+                                    <h5>Lógica PID de Corrección</h5>
+                                    <p>Para evitar que el robot se desvíe en pendientes transversales, se implementó un bucle de control PID (Proporcional-Integral-Derivado) que lee continuamente la retroalimentación de los encoders en las ruedas motrices.</p>
+                                    <h5>Puentes H de Alta Potencia</h5>
+                                    <p>La integración de controladores BTS7960 permite gestionar picos de corriente de hasta 43A con aislamiento optoelectrónico, protegiendo el microcontrolador central de interferencias electromagnéticas generadas por la carga inductiva de los motores.</p>
+                                </div>
+                            </details>
                         </div>
                     </article>
 
-                    <!-- Artículo 3 -->
+                    <!-- Artículo 2.2 -->
                     <article class="blog-card">
                         <div class="blog-image">
-                            <img src="img/galeria/proximamente.png" alt="Innovación local">
+                            <img src="img/galeria/proximamente.png" alt="Seguimiento Autónomo">
+                            <div class="blog-date">22 Ago, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Desarrollo</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Dominick Palacios (Gerencia General)</span>
+                            <h3>Lógica de seguimiento autónomo y baliza de radiofrecuencia</h3>
+                            <p>Explicación del protocolo de comunicación que permite al robot identificar la posición de la baliza portable del usuario en tiempo real.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Mecanismo Hands-Free (Manos Libres)</h5>
+                                    <p>El usuario porta una pequeña baliza del tamaño de un llavero o pin de bolsillo. CarBot triangula la intensidad de señal (RSSI) y la orientación angular respecto a la baliza sin necesidad de mandos a distancia.</p>
+                                    <h5>Filtrado contra Falsos Positivos</h5>
+                                    <p>El entorno urbano está saturado de señales inalámbricas. Implementamos algoritmos de promedio móvil y validación de paquetes de datos cifrados para asegurar que el robot únicamente responda a su baliza vinculada.</p>
+                                    <h5>Fail-Safe de Conexión</h5>
+                                    <p>En caso de que la señal se interrumpa totalmente (por ejemplo, si una puerta de metal blindada bloquea la línea de visión), CarBot se detiene inmediatamente y activa una alerta sonora discreta para notificar al usuario.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2.3 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Plataforma Web">
+                            <div class="blog-date">18 Ago, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Desarrollo</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Roberto Lorenzo (Ventas y Marketing)</span>
+                            <h3>Desarrollo de la plataforma web corporativa en GitHub Pages</h3>
+                            <p>Cómo estructuramos la interfaz web oficial de CarBot S.E. para publicar métricas de rendimiento y documentación técnica accesible.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Arquitectura Liviana y Escalable</h5>
+                                    <p>Desarrollada bajo el repositorio srowbertt.github.io/Cargabot, la página web combina un diseño responsivo mediante HTML5, CSS3 y Bootstrap, adaptándose tanto a pantallas de escritorio como a teléfonos móviles.</p>
+                                    <h5>Línea Gráfica Unificada</h5>
+                                    <p>El portal respeta estrictamente la paleta de colores oficial: blanco (#FFFFFF) para lectura clara, dorado industrial (#D4AF37) para acentos y llamados a la acción, sobre un fondo institucional negro grafito (#121212) y verde grisáceo.</p>
+                                    <h5>Atención y Validación Directa</h5>
+                                    <p>Incluye enlaces de acceso directo a un canal institucional de WhatsApp Business y formularios de preventa, permitiendo capturar datos de estudiantes y talleres interesados en el modelo de reserva B2B.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2.4 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Gestión de Proyectos">
+                            <div class="blog-date">14 Ago, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Desarrollo</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Cristian Ixcot (Administración y Finanzas)</span>
+                            <h3>Gestión de proyectos mecatrónicos: Del esquema lógico al prototipo</h3>
+                            <p>Metodologías ágiles aplicadas al desarrollo acelerado de hardware y software en la microempresa CarBot S.E.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Ciclo de Vida del Hardware</h5>
+                                    <p>Dividimos el proyecto en iteraciones de prototipado rápido. Cada cambio en el diseño 3D o en el esquema de circuitos es sometido a pruebas de estrés antes de pasar a la fase de ensamblaje final.</p>
+                                    <h5>Presupuesto y Costos de Desarrollo</h5>
+                                    <p>La gestión financiera de una startup mecatrónica requiere un control riguroso de compras de insumos (filamentos, componentes electrónicos, baterías). El uso de herramientas digitales de cálculo nos permitió mantener el presupuesto dentro de los márgenes previstos.</p>
+                                    <h5>Documentación Técnica</h5>
+                                    <p>Cada etapa del firmware y de los planos mecánicos queda registrada en repositorios versionados, garantizando que cualquiera de los cuatro socios pueda realizar mantenimiento o actualizaciones sobre el sistema base.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- ================= CATEGORÍA 3: INNOVACIÓN ================= -->
+
+                    <!-- Artículo 3.1 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Impresión 3D">
                             <div class="blog-date">10 Ago, 2026</div>
                         </div>
                         <div class="blog-content">
                             <span class="blog-category">Innovación</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Roberto Lorenzo (Ventas y Marketing)</span>
                             <h3>Diseño de hardware e impresión 3D a medida</h3>
                             <p>Desde la mesa de diseño hasta el ensamblaje: los retos de crear prototipos de alta resistencia utilizando componentes personalizados.</p>
-                            <a href="#" class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></a>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Manufactura Aditiva Industrial</h5>
+                                    <p>El uso de impresoras 3D avanzadas nos permitió fabricar el carenado y las carcasas protectoras con filamentos reforzados (PETG y PLA+ de alto impacto), reduciendo drásticamente el peso frente a estructuras de lámina de acero.</p>
+                                    <h5>Estética Limpia y Funcional</h5>
+                                    <p>A diferencia de proyectos caseros con cables expuestos, CarBot cuenta con un chasis sellado que oculta la electrónica interna y los sensores, protegiéndolos del polvo, caídas directas o salpicaduras de agua.</p>
+                                    <h5>Prototipado Bajo Demanda</h5>
+                                    <p>Esta tecnología nos otorga la flexibilidad de modificar las dimensiones del chasis o imprimir accesorios personalizados para clientes que requieran adaptar herramientas específicas de uso técnico.</p>
+                                </div>
+                            </details>
                         </div>
                     </article>
+
+                    <!-- Artículo 3.2 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Robótica Guatemala">
+                            <div class="blog-date">05 Ago, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Innovación</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Dominick Palacios (Gerencia General)</span>
+                            <h3>Robótica utilitaria en Guatemala: El futuro del emprendimiento S.E.</h3>
+                            <p>Reflexiones sobre el ecosistema de la robótica local bajo la Ley de Fortalecimiento al Emprendimiento (Decreto 20-2018).</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Marco Legal Favorable</h5>
+                                    <p>Constituirnos como Sociedad de Emprendimiento (S.E.) nos ha permitido acceder a una figura jurídica ágil, amparada en la legislación guatemalteca, ideal para validar proyectos mecatrónicos con protección patrimonial.</p>
+                                    <h5>Desarrollo Tecnológico Nacional</h5>
+                                    <p>Demostramos que en Guatemala y específicamente en Quetzaltenango existe el talento técnico para diseñar, programar y ensamblar hardware complejo de nivel comercial sin depender enteramente de la importación de robots extranjeros.</p>
+                                    <h5>Visión de Expansión</h5>
+                                    <p>CarBot inicia en los campus universitarios locales, pero su arquitectura está proyectada para escalar a parques industriales, centros logísticos y comercios de todo el territorio nacional a mediano plazo.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3.3 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Cajetín Receptor">
+                            <div class="blog-date">01 Ago, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Innovación</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Julio Vásquez (Área Técnica)</span>
+                            <h3>Modularidad y adaptabilidad: El diseño del cajetín receptor CarBot</h3>
+                            <p>Análisis del sistema de anclaje rápido para cajas de herramientas Truper y maletines de computación e instrumentación.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Concepto de Masificación Personalizada</h5>
+                                    <p>Ningún usuario transporta exactamente lo mismo. Mientras un estudiante de mecatrónica lleva osciloscopios y protoboards, un técnico electricista carga cajas de herramientas de metal.</p>
+                                    <h5>Mecanismo de Fijación Rápida</h5>
+                                    <p>Diseñamos un sistema de raíles y guías ajustables que aseguran los contenedores comerciales mediante seguros mecánicos de un solo clic, evitando deslizamientos durante el tránsito en terreno irregular.</p>
+                                    <h5>Aislamiento de Vibraciones</h5>
+                                    <p>Las bandejas modulares incorporan amortiguadores de polímero elástico en los puntos de contacto con el chasis, reduciendo la vibración transmitida hacia el equipo electrónico delicado que viaja en la carga.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3.4 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="img/galeria/proximamente.png" alt="Soporte Técnico">
+                            <div class="blog-date">25 Jul, 2026</div>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-category">Innovación</span>
+                            <span class="blog-author"><i class="fas fa-user"></i> Por: Cristian Ixcot (Administración y Finanzas)</span>
+                            <h3>Modelo de negocio circular y soporte técnico preventivo</h3>
+                            <p>Estrategias de retención, mantenimiento postventa y garantías comerciales en la plataforma robótica CarBot S.E.</p>
+                            
+                            <details>
+                                <summary class="read-more">Leer artículo <i class="fas fa-arrow-right"></i></summary>
+                                <div class="article-detail">
+                                    <h5>Servicio Postventa Garantizado</h5>
+                                    <p>A diferencia de productos importados sin soporte local, CarBot ofrece una red directa de mantenimiento preventivo y correctivo con refacciones impresas localmente en menos de 24 horas.</p>
+                                    <h5>Actualización de Módulos (Upgrade Path)</h5>
+                                    <p>El cliente que adquiere la versión base del asistente robótico puede actualizar posteriormente la capacidad de sus baterías, integrar sensores adicionales o cambiar de bandeja modular sin tener que comprar un robot totalmente nuevo.</p>
+                                    <h5>Sostenibilidad Financiera</h5>
+                                    <p>Este modelo asegura ingresos recurrentes a través de contratos de mantenimiento anuales y venta de repuestos modulares, fortaleciendo la estabilidad financiera de la empresa y la lealtad del cliente.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
