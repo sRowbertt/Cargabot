@@ -131,3 +131,13 @@
     box-shadow:none !important;
 
 }
+
+/* Mantiene el texto dorado en la página activa */
+.nav-link.active {
+    color: var(--cb-gold) !important;
+}
+
+/* Mantiene la barra dorada desplegada al 100% en la página activa */
+.nav-link.active::after {
+    width: 100%;
+}
