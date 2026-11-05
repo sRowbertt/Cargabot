@@ -128,25 +128,32 @@ body.page-exit {
 }
 
 /* ==========================================
-                BLOG SECTION
+            BLOG SECTION
 ==========================================*/
 .blog-section {
     padding: 120px 0;
-    background-color: var(--cb-black); /* Fondo oscuro general */
+    background-color: var(--cb-black) !important;
 }
 
-/* Títulos y textos de la cabecera del blog */
-.blog-section .section-title h2 {
+/* Título principal de la sección del blog */
+.blog-section h2 {
     color: var(--cb-text) !important;
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.blog-section .section-title h2 span {
+.blog-section h2 span {
     color: var(--cb-gold);
 }
 
-.blog-section .section-title p,
+/* Descripción debajo del título */
+.blog-section .container > p,
 .blog-section p.section-text {
     color: var(--cb-text-muted) !important;
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 50px;
 }
 
 .blog-grid {
