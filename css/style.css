@@ -1,12 +1,11 @@
-/*==========================================
-            CARGABOT
+/* ==========================================
+            CARBOT
             style.css
 ==========================================*/
 
 /* PALETA DE COLORES - acorde al logo CarBot */
 
 :root{
-
     --cb-black-deep:#0a0a0a;   /* fondos más oscuros (footer, stats) */
     --cb-black:#121212;        /* fondo base */
     --cb-surface:#1c1c1c;      /* tarjetas / cajas */
@@ -21,7 +20,6 @@
 
     --cb-text:#f2f2f2;         /* texto principal sobre fondo oscuro */
     --cb-text-muted:#a8a8a8;   /* texto secundario */
-
 }
 
 /* RESET */
@@ -37,128 +35,85 @@ html{
 }
 
 body{
-
     font-family:'Inter',sans-serif;
-
     background:var(--cb-black);
-
     color:var(--cb-text);
-
     overflow-x:hidden;
-
 }
 
 /* TITULOS */
 
 h1,h2,h3,h4,h5{
-
     font-family:'Poppins',sans-serif;
-
     font-weight:700;
-
 }
 
 /* ENLACES */
 
 a{
-
     text-decoration:none;
-
 }
 
 /* IMAGENES */
 
 img{
-
     max-width:100%;
-
     display:block;
-
 }
 
 /* BOTON PRINCIPAL */
 
 .btn-cargabot{
-
     background:var(--cb-gold);
-
     color:var(--cb-black-deep);
-
     padding:14px 35px;
-
     border-radius:50px;
-
     font-weight:700;
-
     transition:.35s;
-
     border:none;
-
 }
 
 .btn-cargabot:hover{
-
     background:var(--cb-gold-dark);
-
     color:white;
-
     transform:translateY(-4px);
-
 }
 
 /* TITULOS DE SECCIONES */
 
 section h2{
-
     font-size:48px;
-
     text-align:center;
-
     color:var(--cb-text);
-
     margin-bottom:25px;
-
 }
 
 /* PARRAFOS PRINCIPALES */
 
 .section-text{
-
     max-width:900px;
-
     margin:auto;
-
     text-align:center;
-
     line-height:1.8;
-
     font-size:19px;
-
     color:var(--cb-text-muted);
-
     margin-bottom:60px;
-
 }
 
 /* FOOTER */
 
 .footer{
-
     background:var(--cb-black-deep);
-
     color:var(--cb-text);
-
     padding:30px 0;
-
     text-align:center;
-
 }
 
 /* =========================================
-   TRANSICIONES ENTRE PÁGINAS
+    TRANSICIONES ENTRE PÁGINAS
 ========================================= */
 body {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.4s ease-in-out;
 }
 
