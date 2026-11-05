@@ -351,11 +351,15 @@
                 <form class="contact-form" action="https://formsubmit.co/cargabot@gmail.com" method="POST">
                     <input type="hidden" name="_subject" value="Nuevo mensaje desde CarBot">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autorespond" value="¡Hola! Gracias por contactar a CarBot. Hemos recibido tu mensaje y nuestro equipo se pondrá en contacto contigo lo antes posible.">
+                    <input type="hidden" name="_next" value="https://srowbertt.github.io/Cargabot/#contacto">
+                    
                     <input type="text" name="name" placeholder="Nombre completo" required>
                     <input type="email" name="email" placeholder="Correo electrónico" required>
                     <input type="text" name="subject" placeholder="Asunto" required>
                     <textarea name="message" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+                    
                     <button type="submit" class="btn-cargabot">Enviar Mensaje</button>
                 </form>
             </div>
